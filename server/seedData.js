@@ -1,0 +1,533 @@
+export const initialWatches = [
+  {
+    id: "wh-001",
+    name: "Cosmograph Daytona 'Oyster' 40mm",
+    brand: "Rolex",
+    category: "Chronograph",
+    price: 34500,
+    originalPrice: 38000,
+    rating: 4.95,
+    reviewCount: 38,
+    stock: 4,
+    gender: "Unisex",
+    movement: "Perpetual, mechanical chronograph, self-winding (Calibre 4131)",
+    caseSize: "40 mm",
+    caseMaterial: "Oystersteel and 18 ct Everose Gold",
+    dialColor: "Sunray Black with Snailed Counters",
+    waterResistance: "100 metres / 330 feet",
+    powerReserve: "72 hours",
+    crystal: "Scratch-resistant sapphire with anti-reflective coating",
+    strap: "Oyster, flat three-piece links with Oysterlock safety clasp",
+    featured: true,
+    isNew: true,
+    bestseller: true,
+    tagline: "The quintessential chronograph born for endurance racing.",
+    description: "The Cosmograph Daytona is benchmarked in horological mastery. Equipped with calibre 4131, entirely developed and manufactured by Rolex, it guarantees superlative chronometer performance (-2/+2 sec/day). Featuring a tachymetric bezel sculpted in high-tech Cerachrom.",
+    images: [
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1547996160-71dfabbce5fa?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-002",
+    name: "Nautilus 5711/1R 'Jumbo' Rose Gold",
+    brand: "Patek Philippe",
+    category: "Luxury",
+    price: 112000,
+    originalPrice: 125000,
+    rating: 4.98,
+    reviewCount: 24,
+    stock: 2,
+    gender: "Men",
+    movement: "Self-winding mechanical Caliber 26-330 S C with date",
+    caseSize: "40.5 mm",
+    caseMaterial: "18k Rose Gold with satin-brushed and polished finishes",
+    dialColor: "Brown Gradated Sunburst horizontally embossed",
+    waterResistance: "120 metres / 400 feet",
+    powerReserve: "45 hours",
+    crystal: "Anti-reflective sapphire crystal and sapphire-crystal case back",
+    strap: "18k Rose Gold integrated bracelet with Nautilus fold-over clasp",
+    featured: true,
+    isNew: false,
+    bestseller: true,
+    tagline: "The pinnacle of haute horlogerie sports elegance.",
+    description: "With the rounded octagonal shape of its bezel, the ingenious porthole construction of its case, and its horizontally embossed dial, the Nautilus has epitomized the elegant sports watch since 1976. An extraordinary collector's grail hand-finished in Geneva.",
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-003",
+    name: "Royal Oak 'Jumbo' Extra-Thin 16202ST",
+    brand: "Audemars Piguet",
+    category: "Skeleton",
+    price: 68500,
+    originalPrice: 72000,
+    rating: 4.92,
+    reviewCount: 19,
+    stock: 3,
+    gender: "Unisex",
+    movement: "Selfwinding Calibre 7121 with bidirectional 22-carat gold rotor",
+    caseSize: "39 mm",
+    caseMaterial: "Stainless steel case, glareproofed sapphire crystal",
+    dialColor: "Bleu Nuit, Nuage 50 with Petite Tapisserie pattern",
+    waterResistance: "50 metres / 165 feet",
+    powerReserve: "55 hours",
+    crystal: "Glareproofed sapphire crystal and exhibition caseback",
+    strap: "Stainless steel bracelet with AP folding clasp",
+    featured: true,
+    isNew: true,
+    bestseller: true,
+    tagline: "Iconic octagonal bezel with 8 hexagonal white gold screws.",
+    description: "Celebrating 50 years of the Royal Oak legend, the Ref. 16202 houses the state-of-the-art Calibre 7121. The hand-finished Petite Tapisserie dial captures the light with mesmerizing depth, framed by Gérald Genta's revolutionary geometry.",
+    images: [
+      "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-004",
+    name: "Speedmaster Professional Co-Axial Master Chronometer",
+    brand: "Omega",
+    category: "Chronograph",
+    price: 7600,
+    originalPrice: 8200,
+    rating: 4.88,
+    reviewCount: 52,
+    stock: 8,
+    gender: "Men",
+    movement: "Manual-winding chronograph calibre Omega 3861 METAS certified",
+    caseSize: "42 mm",
+    caseMaterial: "Stainless steel with anodised aluminium bezel ring",
+    dialColor: "Step dial in matte black with transfer Omega logo",
+    waterResistance: "50 metres / 165 feet",
+    powerReserve: "50 hours",
+    crystal: "Hesalite crystal with embossed OMEGA Seahorse medallion caseback",
+    strap: "Brushed stainless steel five-arched-links-per-row bracelet",
+    featured: true,
+    isNew: false,
+    bestseller: true,
+    tagline: "The legendary Moonwatch worn by Apollo 11 astronauts on lunar soil.",
+    description: "The Speedmaster Moonwatch is one of the world's most famous timepieces. Having been a part of all six moon landings, this legendary chronograph is an impressive representation of the brand's pioneering spirit. Certified by METAS to resist magnetic fields up to 15,000 gauss.",
+    images: [
+      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1547996160-71dfabbce5fa?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-005",
+    name: "Submariner Date 41mm 'Starbucks' Cerachrom",
+    brand: "Rolex",
+    category: "Diver",
+    price: 15200,
+    originalPrice: 16500,
+    rating: 4.96,
+    reviewCount: 64,
+    stock: 5,
+    gender: "Men",
+    movement: "Perpetual, mechanical, self-winding Calibre 3235",
+    caseSize: "41 mm",
+    caseMaterial: "Oystersteel 904L with unidirectional rotatable 60-minute green bezel",
+    dialColor: "Gloss black with Chromalight luminescent display",
+    waterResistance: "300 metres / 1,000 feet with Triplock triple waterproofness",
+    powerReserve: "70 hours",
+    crystal: "Scratch-resistant sapphire, Cyclops lens over the date",
+    strap: "Oystersteel bracelet with Rolex Glidelock extension system",
+    featured: false,
+    isNew: true,
+    bestseller: true,
+    tagline: "The benchmark among divers' timepieces since 1953.",
+    description: "The Oyster Perpetual Submariner Date in Oystersteel with a green Cerachrom ceramic bezel and a black dial with large luminescent hour markers. Designed for extreme underwater explorations while maintaining impeccable black-tie sophistication.",
+    images: [
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-006",
+    name: "Santos de Cartier Large Skeleton Automatic",
+    brand: "Cartier",
+    category: "Skeleton",
+    price: 32000,
+    originalPrice: 34500,
+    rating: 4.89,
+    reviewCount: 15,
+    stock: 2,
+    gender: "Unisex",
+    movement: "Manufacture mechanical movement with manual winding 9611 MC",
+    caseSize: "39.8 mm",
+    caseMaterial: "Stainless steel case, 7-sided crown set with a faceted sapphire",
+    dialColor: "Openwork skeleton dial with Roman numerals forming the bridges",
+    waterResistance: "100 metres / 330 feet",
+    powerReserve: "72 hours",
+    crystal: "Sapphire crystal and sapphire caseback",
+    strap: "QuickSwitch interchangeable steel bracelet and blue alligator strap",
+    featured: true,
+    isNew: false,
+    bestseller: false,
+    tagline: "The world's first modern men's wristwatch, re-imagined in skeletal form.",
+    description: "Created in 1904 by Louis Cartier for aviator Alberto Santos-Dumont. The skeletonized Roman numerals act as the calibre bridges themselves, exhibiting unparalleled French aesthetic geometry and Swiss micromechanical mastery.",
+    images: [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-007",
+    name: "Monaco Calibre 11 Gulf Special Edition",
+    brand: "Tag Heuer",
+    category: "Chronograph",
+    price: 7800,
+    originalPrice: 8500,
+    rating: 4.82,
+    reviewCount: 29,
+    stock: 6,
+    gender: "Men",
+    movement: "Automatic Chronograph Calibre 11 with left-hand crown",
+    caseSize: "39 mm",
+    caseMaterial: "Fine-brushed and polished stainless steel square case",
+    dialColor: "Sunray blue with iconic Gulf light blue and orange vertical stripes",
+    waterResistance: "100 metres / 330 feet",
+    powerReserve: "40 hours",
+    crystal: "Beveled domed sapphire crystal with anti-reflective coating",
+    strap: "Perforated blue calfskin racing strap with orange lining",
+    featured: false,
+    isNew: true,
+    bestseller: false,
+    tagline: "Steve McQueen's legendary cinematic racing chronograph.",
+    description: "The square-faced icon immortalized by Steve McQueen in the 1971 film Le Mans. The Monaco Gulf edition pays homage to the legendary Gulf Racing colors, fitted with the left-hand winding crown that proved a watch no longer needed winding by hand.",
+    images: [
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-008",
+    name: "RM 011 'Felipe Massa' Flyback Chronograph",
+    brand: "Richard Mille",
+    category: "Tourbillon",
+    price: 240000,
+    originalPrice: 260000,
+    rating: 4.97,
+    reviewCount: 9,
+    stock: 1,
+    gender: "Men",
+    movement: "Skeletonized automatic winding movement RMAC1 with variable-geometry rotor",
+    caseSize: "50 x 40 mm",
+    caseMaterial: "Titanium grade 5 and Carbon TPT with spline screws",
+    dialColor: "Sapphire dial with anti-glare treatment, Arabic numeral indices",
+    waterResistance: "50 metres / 165 feet",
+    powerReserve: "55 hours",
+    crystal: "Sapphire glass thickness 1.20 mm at the center",
+    strap: "High-density vulcanized black rubber with titanium deployant buckle",
+    featured: true,
+    isNew: false,
+    bestseller: true,
+    tagline: "A Formula 1 racing machine engineered for the wrist.",
+    description: "Engineered in collaboration with F1 driver Felipe Massa. The RM 011 combines ultra-lightweight Grade 5 titanium, an aerodynamic tonneau case, flyback chronograph countdown at 9 o'clock, and an annual calendar with oversized date aperture.",
+    images: [
+      "https://images.unsplash.com/photo-1547996160-71dfabbce5fa?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-009",
+    name: "Overseas Perpetual Calendar Ultra-Thin",
+    brand: "Vacheron Constantin",
+    category: "Luxury",
+    price: 98000,
+    originalPrice: 105000,
+    rating: 4.94,
+    reviewCount: 14,
+    stock: 2,
+    gender: "Men",
+    movement: "Automatic Calibre 1120 QP/1 bearing the Hallmark of Geneva",
+    caseSize: "41.5 mm",
+    caseMaterial: "18K 5N Pink Gold with polished Maltese cross bezel",
+    dialColor: "Translucent blue lacquered dial with satin-sunburst finish",
+    waterResistance: "50 metres / 165 feet",
+    powerReserve: "40 hours",
+    crystal: "Sapphire crystal with anti-reflective treatment",
+    strap: "Triple interchangeable system: 18K pink gold, blue rubber, blue Mississippiensis alligator",
+    featured: false,
+    isNew: true,
+    bestseller: false,
+    tagline: "Hallmark of Geneva excellence in an ultra-slim 8.1mm profile.",
+    description: "Vacheron Constantin Overseas perpetual calendar keeps accurate track of leap years without adjustment until 2100. Comes with three easily interchangeable straps without needing any tools.",
+    images: [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-010",
+    name: "Lange 1 '25th Anniversary' Grand Complication",
+    brand: "A. Lange & Söhne",
+    category: "Classic",
+    price: 49500,
+    originalPrice: 53000,
+    rating: 4.96,
+    reviewCount: 18,
+    stock: 3,
+    gender: "Unisex",
+    movement: "Manufacture calibre L121.1 manually wound in German silver",
+    caseSize: "38.5 mm",
+    caseMaterial: "18-carat white gold with hand-engraved balance cock",
+    dialColor: "Solid silver, argenté with thermally blued steel hands",
+    waterResistance: "30 metres / 100 feet",
+    powerReserve: "72 hours (Twin barrel)",
+    crystal: "Sapphire crystal back displaying Glashütte ribbing and gold chatons",
+    strap: "Hand-stitched dark blue alligator leather with white gold pin buckle",
+    featured: false,
+    isNew: false,
+    bestseller: false,
+    tagline: "The asymmetric Saxon masterpiece featuring the outsize date.",
+    description: "Since its introduction in 1994, the Lange 1 has defined Saxon high watchmaking. The asymmetric arrangement of its dial complies with the golden ratio, highlighted by the patented outsize date inspired by Dresden's Semper Opera House clock.",
+    images: [
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-011",
+    name: "Portugieser Perpetual Calendar 44 Double Moon",
+    brand: "IWC Schaffhausen",
+    category: "Tourbillon",
+    price: 36800,
+    originalPrice: 39000,
+    rating: 4.87,
+    reviewCount: 22,
+    stock: 4,
+    gender: "Men",
+    movement: "IWC-manufactured 52615 calibre with Pellaton automatic winding",
+    caseSize: "44.2 mm",
+    caseMaterial: "18 ct Armor Gold with arched-edge sapphire crystal",
+    dialColor: "Obsidian black lacquer with gold-plated appliques",
+    waterResistance: "50 metres / 165 feet",
+    powerReserve: "168 hours (7 days)",
+    crystal: "Sapphire, arched edge, antireflective coating on both sides",
+    strap: "Santoni black alligator leather strap with 18k Armor Gold folding clasp",
+    featured: false,
+    isNew: true,
+    bestseller: false,
+    tagline: "Simultaneous Northern and Southern Hemisphere precision moon phase.",
+    description: "Kurt Klaus's legendary perpetual calendar requires no adjustment until the year 2100. Featuring the unique double moon phase display that diverges from the moon's actual trajectory by just one day after 577.5 years.",
+    images: [
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1547996160-71dfabbce5fa?auto=format&fit=crop&w=1200&q=85"
+    ]
+  },
+  {
+    id: "wh-012",
+    name: "PRX Powermatic 80 Ice Blue Dial",
+    brand: "Tissot",
+    category: "Classic",
+    price: 725,
+    originalPrice: 850,
+    rating: 4.85,
+    reviewCount: 89,
+    stock: 14,
+    gender: "Unisex",
+    movement: "Swiss automatic Powermatic 80.111 with Nivachron balance spring",
+    caseSize: "40 mm",
+    caseMaterial: "316L stainless steel tonneau case with polished bezel",
+    dialColor: "Waffle-textured Ice Blue with Super-LumiNova indices",
+    waterResistance: "100 metres / 330 feet",
+    powerReserve: "80 hours",
+    crystal: "Scratch-resistant sapphire crystal with antireflective coating",
+    strap: "Integrated satin-finished stainless steel single-link bracelet",
+    featured: false,
+    isNew: true,
+    bestseller: true,
+    tagline: "Accessible Swiss luxury with 80 hours power reserve.",
+    description: "Slim, smooth and timeless, the Tissot PRX 40 205 re-creates an icon from 1978. The hypnotic ice-blue waffle dial and integrated bracelet offer modern high-horology aesthetics with unmatched everyday reliability.",
+    images: [
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1200&q=85"
+    ]
+  }
+];
+
+export const initialReviews = [
+  {
+    id: "rev-1",
+    watchId: "wh-001",
+    userName: "Alexander von Hapsburg",
+    userAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80",
+    rating: 5,
+    date: "2026-10-14",
+    title: "A Masterpiece of Swiss Precision",
+    content: "Acquired this Daytona through WatchHub's white-glove concierge. Delivered in an armored case with all papers verified by Geneva hallmarks. The ceramic bezel and Everose luster are simply hypnotic.",
+    verifiedBuyer: true,
+    helpfulCount: 42
+  },
+  {
+    id: "rev-2",
+    watchId: "wh-001",
+    userName: "Julian Sterling",
+    userAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    rating: 5,
+    date: "2026-10-28",
+    title: "Benchmark chronograph",
+    content: "The balance on the wrist is perfection. Keeps time within +0.8s per day. WatchHub's customer service provided real-time tracking updates every step of the journey.",
+    verifiedBuyer: true,
+    helpfulCount: 19
+  },
+  {
+    id: "rev-3",
+    watchId: "wh-002",
+    userName: "Sophia Loren-Bauer",
+    userAvatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80",
+    rating: 5,
+    date: "2026-11-02",
+    title: "Unrivaled Haute Horlogerie",
+    content: "The 5711 in rose gold is an absolute museum piece. The gradated dial reflects light differently in every room. Unbelievably comfortable integrated bracelet.",
+    verifiedBuyer: true,
+    helpfulCount: 31
+  },
+  {
+    id: "rev-4",
+    watchId: "wh-004",
+    userName: "Capt. Michael Thorne",
+    userAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+    rating: 5,
+    date: "2026-09-18",
+    title: "Every space and aviation enthusiast must own one",
+    content: "The METAS certified 3861 calibre is rock solid. The stepped dial and dot-over-90 bezel details honor the Apollo legacy. Stellar buying experience from WatchHub.",
+    verifiedBuyer: true,
+    helpfulCount: 57
+  }
+];
+
+export const initialOrders = [
+  {
+    id: "ORD-94821",
+    userId: "usr-002",
+    userName: "Lord Arthur Pendelton",
+    userEmail: "arthur@luxuryclient.com",
+    date: "2026-11-12T14:30:00Z",
+    status: "In Transit",
+    trackingNumber: "WH-VIP-8839210-CH",
+    carrier: "Swiss Armored Vault Courier",
+    shippingAddress: {
+      fullName: "Lord Arthur Pendelton",
+      address: "42 Rue du Rhône",
+      city: "Geneva",
+      country: "Switzerland",
+      postalCode: "1204"
+    },
+    items: [
+      {
+        watchId: "wh-001",
+        name: "Cosmograph Daytona 'Oyster' 40mm",
+        brand: "Rolex",
+        price: 34500,
+        quantity: 1,
+        image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80"
+      }
+    ],
+    subtotal: 34500,
+    discount: 3450,
+    couponApplied: "WATCHVIP10",
+    tax: 0,
+    shippingFee: 0,
+    total: 31050,
+    paymentMethod: "Swiss Bank Wire Transfer",
+    notes: "White glove signature required upon physical handoff."
+  },
+  {
+    id: "ORD-93710",
+    userId: "usr-002",
+    userName: "Lord Arthur Pendelton",
+    userEmail: "arthur@luxuryclient.com",
+    date: "2026-10-05T09:15:00Z",
+    status: "Delivered",
+    trackingNumber: "WH-VIP-7721904-CH",
+    carrier: "Swiss Armored Vault Courier",
+    shippingAddress: {
+      fullName: "Lord Arthur Pendelton",
+      address: "42 Rue du Rhône",
+      city: "Geneva",
+      country: "Switzerland",
+      postalCode: "1204"
+    },
+    items: [
+      {
+        watchId: "wh-004",
+        name: "Speedmaster Professional Co-Axial Master Chronometer",
+        brand: "Omega",
+        price: 7600,
+        quantity: 1,
+        image: "https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=400&q=80"
+      }
+    ],
+    subtotal: 7600,
+    discount: 0,
+    tax: 0,
+    shippingFee: 0,
+    total: 7600,
+    paymentMethod: "Credit Card (Amex Centurion)",
+    notes: "Completed delivery and verified by client."
+  }
+];
+
+export const initialUsers = [
+  {
+    id: "usr-001",
+    name: "Henri Stern",
+    email: "admin@watchhub.luxury",
+    password: "admin123", // For evaluation demo
+    role: "admin",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+    phone: "+41 22 819 12 00",
+    address: "Rue du Stand 6, 1204 Geneva, Switzerland",
+    createdAt: "2026-01-01"
+  },
+  {
+    id: "usr-002",
+    name: "Arthur Pendelton",
+    email: "client@watchhub.luxury",
+    password: "user123", // For evaluation demo
+    role: "customer",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    phone: "+44 20 7946 0912",
+    address: "Mayfair, Grosvenor Square, London W1K 6JP, UK",
+    createdAt: "2026-03-15"
+  }
+];
+
+export const initialFAQs = [
+  {
+    category: "Authenticity & Heritage",
+    question: "How does WatchHub guarantee 100% genuine authenticity of all timepieces?",
+    answer: "Every timepiece listed on WatchHub undergoes a rigorous 48-point physical and horological verification by master watchmakers certified by the Federation of the Swiss Watch Industry (FH). We verify the movement serials, laser engraved hallmarks, balance wheel oscillations, and escapement tolerances. All pieces are delivered with original manufacturer paperwork, serialized warranty cards, and WatchHub's digital NFT authenticity certificate."
+  },
+  {
+    category: "Shipping & Armored Delivery",
+    question: "What delivery options and insurance are provided for multi-thousand dollar watches?",
+    answer: "We offer complimentary worldwide Armored Courier delivery (via Malca-Amit and Ferrari Group). All shipments are 100% fully insured for their full replacement value up until the physical handover. Direct photo identification and physical biometric/handwritten signature are required upon delivery."
+  },
+  {
+    category: "Warranty & Servicing",
+    question: "What warranty coverage is included with my purchase?",
+    answer: "All new watches retain the complete manufacturer warranty (up to 5 years). In addition, WatchHub provides our proprietary 2-Year International Horology Protection Plan covering mechanical movement servicing, water-resistance gasket testing, and ultrasonic case cleaning at no extra charge."
+  },
+  {
+    category: "Payments & Bespoke Orders",
+    question: "What payment methods are supported for high-value orders?",
+    answer: "We accept all major premium credit cards (Visa Infinite, Mastercard World Elite, American Express Centurion), Swiss IBAN wire transfers, certified bank drafts, and cryptocurrency (BTC, ETH, USDC). For bespoke or off-catalog allocations, our VIP Concierge arranges private private-banking escrow."
+  }
+];

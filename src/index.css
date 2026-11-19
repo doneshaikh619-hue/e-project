@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: #050505;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #050505;
+    color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    letter-spacing: 0.05em;
+  }
+
+  /* Force luxury dark palette on all native inputs and dropdowns */
+  input, select, textarea {
+    background-color: #141414 !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    outline: none !important;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: #E5C158 !important;
+    box-shadow: 0 0 10px rgba(229, 193, 88, 0.25) !important;
+  }
+
+  select option {
+    background-color: #141414 !important;
+    color: #FFFFFF !important;
+    padding: 8px !important;
+  }
+
+  ::placeholder {
+    color: #666666 !important;
+  }
+}
+
+/* Lenis Smooth Scroll Recommended CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Minimalist Obsidian Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E5C158;
+}
+
+/* TIMUSE Editorial Utilities */
+.glass-obsidian {
+  background: rgba(14, 14, 14, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card {
+  background: rgba(14, 14, 14, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-panel {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gold-button {
+  background-color: #E5C158;
+  color: #050505;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.gold-button:hover {
+  background-color: #d4af37;
+  box-shadow: 0 4px 20px rgba(229, 193, 88, 0.35);
+}
+
+.gold-button-outline {
+  background: transparent;
+  border: 1px solid #E5C158;
+  color: #E5C158;
+  transition: all 0.2s ease-in-out;
+}
+
+.gold-button-outline:hover {
+  background: #E5C158;
+  color: #050505;
+  box-shadow: 0 4px 20px rgba(229, 193, 88, 0.35);
+}
+
+.gold-chip {
+  background: #E5C158;
+  color: #050505;
+  font-weight: 600;
+}
+
+/* Floor Reflection Filter */
+.watch-reflection {
+  -webkit-box-reflect: below 2px linear-gradient(transparent, transparent 70%, rgba(255, 255, 255, 0.12));
+}
