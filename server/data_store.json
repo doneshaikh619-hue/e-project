@@ -418,7 +418,7 @@
       "style": "Bold and sporty",
       "price": 42500,
       "originalPrice": 46000,
-      "stock": 3,
+      "stock": 2,
       "rating": 4.98,
       "reviewCount": 56,
       "gender": "Unisex",
@@ -596,6 +596,41 @@
     }
   ],
   "orders": [
+    {
+      "userId": "usr-client-timuse",
+      "userName": "Julian Vance",
+      "userEmail": "client@timuse.luxury",
+      "subtotal": 42500,
+      "discount": 0,
+      "couponApplied": null,
+      "tax": 0,
+      "shippingFee": 0,
+      "total": 42500,
+      "paymentMethod": "Centurion Black Card",
+      "carrier": "Swiss Armored Vault Courier",
+      "shippingAddress": {
+        "fullName": "Julian Vance",
+        "address": "3018 Bee Cave Rd, Suite 400, Austin, TX 78746",
+        "city": "Geneva",
+        "country": "Switzerland",
+        "postalCode": "1204"
+      },
+      "items": [
+        {
+          "watchId": "wh-rolex-daytona",
+          "name": "COSMOGRAPH DAYTONA EVEROSE",
+          "brand": "Rolex",
+          "price": 42500,
+          "quantity": 1,
+          "image": "/assets/watches/rolex_daytona_everose.png"
+        }
+      ],
+      "notes": "Private vault courier signature required upon handoff.",
+      "id": "ORD-69417",
+      "date": "2026-11-19T10:06:24.134Z",
+      "status": "Processing Vault Verification",
+      "trackingNumber": "WH-VIP-1747675-CH"
+    },
     {
       "userId": "usr-client-timuse",
       "userName": "Julian Vance",
@@ -844,7 +879,8 @@
       "wh-001",
       "wh-003",
       "wh-006"
-    ]
+    ],
+    "usr-client-timuse": []
   },
   "feedback": [
     {
