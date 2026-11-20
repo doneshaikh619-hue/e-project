@@ -90,11 +90,11 @@ export default function HeroBasquiat({ onOpenBooking }) {
           muted
           playsInline
           className="w-full h-full object-cover object-center filter brightness-105 contrast-110"
-          poster="/assets/timuse/hero_basquiat_watch.jpg"
+          poster="./assets/timuse/hero_basquiat_watch.jpg"
         >
-          <source src="/assets/videos/hero_chronograph.mp4" type="video/mp4" />
+          <source src="./assets/videos/hero_chronograph.mp4" type="video/mp4" />
           <img
-            src="/assets/timuse/hero_basquiat_watch.jpg"
+            src="./assets/timuse/hero_basquiat_watch.jpg"
             alt="Raymond Weil Basquiat Chronograph"
             className="w-full h-full object-cover object-center"
           />

@@ -28,9 +28,9 @@ export const watchesData = [
     "description": "The Freelancer Basquiat Special Edition is an energetic blend of raw street art aesthetics and Swiss horological mastery. Featuring the iconic Basquiat crown at 12 o'clock and chronograph dials with artistic strokes.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/raymond_weil_basquiat.png",
+    "image": "./assets/watches/raymond_weil_basquiat.png",
     "images": [
-      "/assets/watches/raymond_weil_basquiat.png"
+      "./assets/watches/raymond_weil_basquiat.png"
     ]
   },
   {
@@ -62,9 +62,9 @@ export const watchesData = [
     "description": "The Polaris Perpetual Calendar enriches the sporting collection with one of horology's most complex complications, housing the in-house Calibre 868 in a robust pink gold case.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/jlc_polaris_perpetual.png",
+    "image": "./assets/watches/jlc_polaris_perpetual.png",
     "images": [
-      "/assets/watches/jlc_polaris_perpetual.png"
+      "./assets/watches/jlc_polaris_perpetual.png"
     ]
   },
   {
@@ -96,9 +96,9 @@ export const watchesData = [
     "description": "The Master Control Calendar displays complete calendar indications: day, date, month, and poetic moon phases, featuring a jumping date hand between the 15th and 16th day.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/jlc_master_control.png",
+    "image": "./assets/watches/jlc_master_control.png",
     "images": [
-      "/assets/watches/jlc_master_control.png"
+      "./assets/watches/jlc_master_control.png"
     ]
   },
   {
@@ -130,9 +130,9 @@ export const watchesData = [
     "description": "Master Ultra Thin exhibits extreme refinement in a 39mm pink gold case, presenting a power reserve indicator and pointer date on an eggshell dial.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/jlc_master_ultra_thin.png",
+    "image": "./assets/watches/jlc_master_ultra_thin.png",
     "images": [
-      "/assets/watches/jlc_master_ultra_thin.png"
+      "./assets/watches/jlc_master_ultra_thin.png"
     ]
   },
   {
@@ -164,9 +164,9 @@ export const watchesData = [
     "description": "This monumental creation marries high jewellery with chiming grand complications, set with an array of multi-coloured sapphires and baguette diamonds.",
     "featured": true,
     "historical": true,
-    "image": "/assets/watches/patek_5260_rainbow.png",
+    "image": "./assets/watches/patek_5260_rainbow.png",
     "images": [
-      "/assets/watches/patek_5260_rainbow.png"
+      "./assets/watches/patek_5260_rainbow.png"
     ]
   },
   {
@@ -198,9 +198,9 @@ export const watchesData = [
     "description": "The Calatrava Pilot Travel Time 5524G features a second time-zone indication coupled with local day/night apertures for globetrotting connoisseurs.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/patek_5524g_pilot.png",
+    "image": "./assets/watches/patek_5524g_pilot.png",
     "images": [
-      "/assets/watches/patek_5524g_pilot.png"
+      "./assets/watches/patek_5524g_pilot.png"
     ]
   },
   {
@@ -232,9 +232,9 @@ export const watchesData = [
     "description": "The 5326G brings together the patented Annual Calendar and two-time-zone Travel Time display in a textured vintage-inspired dial with hobnail guilloch\u00e9 flanks.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/patek_5326g_annual.png",
+    "image": "./assets/watches/patek_5326g_annual.png",
     "images": [
-      "/assets/watches/patek_5326g_annual.png"
+      "./assets/watches/patek_5326g_annual.png"
     ]
   },
   {
@@ -266,9 +266,9 @@ export const watchesData = [
     "description": "A masterpiece of transparency. The sapphire crystal dial showcases the intricate perpetual calendar mechanisms and the chiming hammers of the Calibre R 27.",
     "featured": true,
     "historical": true,
-    "image": "/assets/watches/patek_5304_repeater.png",
+    "image": "./assets/watches/patek_5304_repeater.png",
     "images": [
-      "/assets/watches/patek_5304_repeater.png"
+      "./assets/watches/patek_5304_repeater.png"
     ]
   },
   {
@@ -300,9 +300,9 @@ export const watchesData = [
     "description": "The world's first minute repeater that always chimes local time according to the city aligned with 12 o'clock, embellished with a Grand Feu cloisonn\u00e9 enamel dial.",
     "featured": true,
     "historical": true,
-    "image": "/assets/watches/patek_5531g_world_time.png",
+    "image": "./assets/watches/patek_5531g_world_time.png",
     "images": [
-      "/assets/watches/patek_5531g_world_time.png"
+      "./assets/watches/patek_5531g_world_time.png"
     ]
   },
   {
@@ -334,9 +334,9 @@ export const watchesData = [
     "description": "A pinnacle reference uniting five of horology's highest complications: minute repeater, tourbillon, perpetual calendar with retrograde date, and moon phases.",
     "featured": false,
     "historical": true,
-    "image": "/assets/watches/patek_5316_platinum.png",
+    "image": "./assets/watches/patek_5316_platinum.png",
     "images": [
-      "/assets/watches/patek_5316_platinum.png"
+      "./assets/watches/patek_5316_platinum.png"
     ]
   },
   {
@@ -368,9 +368,9 @@ export const watchesData = [
     "description": "Pairing the Rattrapante split-seconds chronograph with a perpetual calendar, finished in warm 18k rose gold with an olive green sunburst face.",
     "featured": false,
     "historical": true,
-    "image": "/assets/watches/patek_5204r_chronograph.png",
+    "image": "./assets/watches/patek_5204r_chronograph.png",
     "images": [
-      "/assets/watches/patek_5204r_chronograph.png"
+      "./assets/watches/patek_5204r_chronograph.png"
     ]
   },
   {
@@ -402,9 +402,9 @@ export const watchesData = [
     "description": "The Royal Oak Double Balance Wheel Openworked fixes the hairsprings on the same axis to dramatically increase stabilizing precision and visual artistry.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/ap_royal_oak_openworked.png",
+    "image": "./assets/watches/ap_royal_oak_openworked.png",
     "images": [
-      "/assets/watches/ap_royal_oak_openworked.png"
+      "./assets/watches/ap_royal_oak_openworked.png"
     ]
   },
   {
@@ -436,9 +436,9 @@ export const watchesData = [
     "description": "The Cosmograph Daytona is an icon forever joined in name and function to high performance and motorsport circuits around the globe.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/rolex_daytona_everose.png",
+    "image": "./assets/watches/rolex_daytona_everose.png",
     "images": [
-      "/assets/watches/rolex_daytona_everose.png"
+      "./assets/watches/rolex_daytona_everose.png"
     ]
   },
   {
@@ -470,9 +470,9 @@ export const watchesData = [
     "description": "The Overseas Perpetual Calendar Ultra-Thin skeleton brings together high complication mechanics with athletic spirit in an openworked pink gold silhouette.",
     "featured": true,
     "historical": false,
-    "image": "/assets/watches/vc_overseas_skeleton.png",
+    "image": "./assets/watches/vc_overseas_skeleton.png",
     "images": [
-      "/assets/watches/vc_overseas_skeleton.png"
+      "./assets/watches/vc_overseas_skeleton.png"
     ]
   },
   {
@@ -504,9 +504,9 @@ export const watchesData = [
     "description": "Santos de Cartier skeleton watch featuring Roman numerals cleverly hollowed out to act as structural bridges for the manufacture calibre.",
     "featured": false,
     "historical": false,
-    "image": "/assets/watches/cartier_santos_skeleton.png",
+    "image": "./assets/watches/cartier_santos_skeleton.png",
     "images": [
-      "/assets/watches/cartier_santos_skeleton.png"
+      "./assets/watches/cartier_santos_skeleton.png"
     ]
   },
   {
@@ -538,9 +538,9 @@ export const watchesData = [
     "description": "The Speedmaster Professional Moonwatch is one of the world's most iconic timepieces. Having been a part of all six moon landings.",
     "featured": false,
     "historical": false,
-    "image": "/assets/watches/omega_speedmaster_moon.png",
+    "image": "./assets/watches/omega_speedmaster_moon.png",
     "images": [
-      "/assets/watches/omega_speedmaster_moon.png"
+      "./assets/watches/omega_speedmaster_moon.png"
     ]
   }
 ];
@@ -555,7 +555,7 @@ export const storesData = [
     "hours": "10:00 AM - 08:00 PM CST",
     "email": "austin.flagship@timuse.luxury",
     "phone": "+1 (512) 409-5718",
-    "image": "/assets/timuse/store_austin_flagship.jpg",
+    "image": "./assets/timuse/store_austin_flagship.jpg",
     "coordinates": {
       "x": 45,
       "y": 52
@@ -570,7 +570,7 @@ export const storesData = [
     "hours": "11:00 AM - 07:00 PM CST",
     "email": "vault.austin@timuse.luxury",
     "phone": "+1 (512) 974-4343",
-    "image": "/assets/timuse/store_austin_vault.jpg",
+    "image": "./assets/timuse/store_austin_vault.jpg",
     "coordinates": {
       "x": 78,
       "y": 32
@@ -585,7 +585,7 @@ export const storesData = [
     "hours": "Private Escrow by Appointment",
     "email": "salon.austin@timuse.luxury",
     "phone": "+1 (512) 882-9901",
-    "image": "/assets/timuse/store_austin_lounge.jpg",
+    "image": "./assets/timuse/store_austin_lounge.jpg",
     "coordinates": {
       "x": 82,
       "y": 68
@@ -598,48 +598,48 @@ export const brandsData = [
     "name": "PATEK PHILIPPE",
     "origin": "Geneva, Switzerland",
     "est": "1839",
-    "heroWatch": "/assets/watches/patek_5531g_world_time.png",
-    "ribbon": "/assets/timuse/patek_brand_ribbon.jpg",
+    "heroWatch": "./assets/watches/patek_5531g_world_time.png",
+    "ribbon": "./assets/timuse/patek_brand_ribbon.jpg",
     "tagline": "You never actually own a Patek Philippe. You merely look after it for the next generation."
   },
   {
     "name": "JAEGER-LE COULTRE",
     "origin": "Le Sentier, Switzerland",
     "est": "1833",
-    "heroWatch": "/assets/watches/jlc_polaris_perpetual.png",
-    "ribbon": "/assets/timuse/patek_brand_ribbon.jpg",
+    "heroWatch": "./assets/watches/jlc_polaris_perpetual.png",
+    "ribbon": "./assets/timuse/patek_brand_ribbon.jpg",
     "tagline": "The Watchmaker of Watchmakers."
   },
   {
     "name": "AUDEMARS PIGUET",
     "origin": "Le Brassus, Switzerland",
     "est": "1875",
-    "heroWatch": "/assets/watches/ap_royal_oak_openworked.png",
-    "ribbon": "/assets/timuse/patek_brand_ribbon.jpg",
+    "heroWatch": "./assets/watches/ap_royal_oak_openworked.png",
+    "ribbon": "./assets/timuse/patek_brand_ribbon.jpg",
     "tagline": "To break the rules, you must first master them."
   },
   {
     "name": "RAYMOND WEIL",
     "origin": "Geneva, Switzerland",
     "est": "1976",
-    "heroWatch": "/assets/watches/raymond_weil_basquiat.png",
-    "ribbon": "/assets/timuse/patek_brand_ribbon.jpg",
+    "heroWatch": "./assets/watches/raymond_weil_basquiat.png",
+    "ribbon": "./assets/timuse/patek_brand_ribbon.jpg",
     "tagline": "Precision, artistic freedom, and horological rhythm."
   },
   {
     "name": "ROLEX",
     "origin": "Geneva, Switzerland",
     "est": "1905",
-    "heroWatch": "/assets/watches/rolex_daytona_everose.png",
-    "ribbon": "/assets/timuse/patek_brand_ribbon.jpg",
+    "heroWatch": "./assets/watches/rolex_daytona_everose.png",
+    "ribbon": "./assets/timuse/patek_brand_ribbon.jpg",
     "tagline": "A crown for every achievement."
   },
   {
     "name": "VACHERON CONSTANTIN",
     "origin": "Geneva, Switzerland",
     "est": "1755",
-    "heroWatch": "/assets/watches/vc_overseas_skeleton.png",
-    "ribbon": "/assets/timuse/patek_brand_ribbon.jpg",
+    "heroWatch": "./assets/watches/vc_overseas_skeleton.png",
+    "ribbon": "./assets/timuse/patek_brand_ribbon.jpg",
     "tagline": "One of not many. Uninterrupted watchmaking since 1755."
   }
 ];

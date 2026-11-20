@@ -38,7 +38,7 @@ export default function WatchCard({ watch }) {
     ? Math.round(((watch.originalPrice - watch.price) / watch.originalPrice) * 100)
     : null;
 
-  const watchImg = watch.image || (watch.images && watch.images[0]) || '/assets/watches/raymond_weil_basquiat.png';
+  const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png';
 
   return (
     <div

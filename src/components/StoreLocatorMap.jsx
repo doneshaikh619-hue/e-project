@@ -102,7 +102,7 @@ export default function StoreLocatorMap({ onOpenAppointmentModal }) {
             {/* Dark Map Vector Texture */}
             <div className="absolute inset-0 bg-[#080808]">
               <img
-                src="/assets/timuse/stores_vector_map.jpg"
+                src="./assets/timuse/stores_vector_map.jpg"
                 alt="Austin Dark Vector Map"
                 className="w-full h-full object-cover filter contrast-125 opacity-75 group-hover:scale-102 transition-transform duration-700"
               />

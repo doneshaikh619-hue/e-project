@@ -115,33 +115,33 @@ export default function FindMyWatchConcierge() {
           <div className="absolute inset-0 grid grid-cols-3 sm:grid-cols-5 gap-6 opacity-40 pointer-events-none select-none">
             {/* Column 1 */}
             <div className="flex flex-col space-y-12">
-              <img src="/assets/watches/jlc_polaris_perpetual.png" alt="" className="w-36 h-36 object-contain" />
-              <img src="/assets/watches/leather_strap.png" alt="" className="w-32 h-32 object-contain" />
-              <img src="/assets/watches/patek_5260_rainbow.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/jlc_polaris_perpetual.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/leather_strap.png" alt="" className="w-32 h-32 object-contain" />
+              <img src="./assets/watches/patek_5260_rainbow.png" alt="" className="w-36 h-36 object-contain" />
             </div>
             {/* Column 2 */}
             <div className="flex flex-col space-y-12 translate-y-8">
-              <img src="/assets/watches/jlc_master_control.png" alt="" className="w-36 h-36 object-contain" />
-              <img src="/assets/watches/leather_strap.png" alt="" className="w-32 h-32 object-contain" />
-              <img src="/assets/watches/patek_5326g_annual.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/jlc_master_control.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/leather_strap.png" alt="" className="w-32 h-32 object-contain" />
+              <img src="./assets/watches/patek_5326g_annual.png" alt="" className="w-36 h-36 object-contain" />
             </div>
             {/* Column 3 */}
             <div className="flex flex-col space-y-12">
-              <img src="/assets/watches/jlc_master_ultra_thin.png" alt="" className="w-36 h-36 object-contain" />
-              <img src="/assets/watches/raymond_weil_basquiat.png" alt="" className="w-36 h-36 object-contain" />
-              <img src="/assets/watches/patek_5531g_world_time.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/jlc_master_ultra_thin.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/raymond_weil_basquiat.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/patek_5531g_world_time.png" alt="" className="w-36 h-36 object-contain" />
             </div>
             {/* Column 4 */}
             <div className="hidden sm:flex flex-col space-y-12 translate-y-8">
-              <img src="/assets/watches/patek_5304_repeater.png" alt="" className="w-36 h-36 object-contain" />
-              <img src="/assets/watches/ap_royal_oak_openworked.png" alt="" className="w-32 h-32 object-contain" />
-              <img src="/assets/watches/rolex_daytona_everose.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/patek_5304_repeater.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/ap_royal_oak_openworked.png" alt="" className="w-32 h-32 object-contain" />
+              <img src="./assets/watches/rolex_daytona_everose.png" alt="" className="w-36 h-36 object-contain" />
             </div>
             {/* Column 5 */}
             <div className="hidden sm:flex flex-col space-y-12">
-              <img src="/assets/watches/patek_5524g_pilot.png" alt="" className="w-36 h-36 object-contain" />
-              <img src="/assets/watches/vc_overseas_skeleton.png" alt="" className="w-32 h-32 object-contain" />
-              <img src="/assets/watches/jlc_polaris_perpetual.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/patek_5524g_pilot.png" alt="" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/vc_overseas_skeleton.png" alt="" className="w-32 h-32 object-contain" />
+              <img src="./assets/watches/jlc_polaris_perpetual.png" alt="" className="w-36 h-36 object-contain" />
             </div>
           </div>
 
@@ -277,7 +277,7 @@ export default function FindMyWatchConcierge() {
                     {/* Isolated Watch Image with Floor Shadow & Hover Lift */}
                     <div className="relative py-8 flex items-center justify-center">
                       <img
-                        src={watch.image || (watch.images && watch.images[0]) || '/assets/watches/raymond_weil_basquiat.png'}
+                        src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'}
                         alt={watch.name}
                         className="w-48 h-48 sm:w-56 sm:h-56 object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
                       />

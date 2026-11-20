@@ -62,9 +62,9 @@ export default function OurBrandsPortal() {
                   preload="auto"
                   className="w-full h-full object-cover filter brightness-115 contrast-125"
                 >
-                  <source src="/assets/videos/brand_light_streak.mp4" type="video/mp4" />
+                  <source src="./assets/videos/brand_light_streak.mp4" type="video/mp4" />
                   <img
-                    src={brand.ribbon || "/assets/timuse/patek_brand_ribbon.jpg"}
+                    src={brand.ribbon || "./assets/timuse/patek_brand_ribbon.jpg"}
                     alt=""
                     className="w-full h-full object-cover"
                   />

@@ -62,7 +62,7 @@ export default function AdminDashboardPage() {
     strap: 'Oyster Everose Gold Bracelet',
     tagline: 'The quintessential tool watch.',
     description: 'Manufactured according to the highest Geneva horology standards.',
-    image: '/assets/watches/rolex_daytona_everose.png'
+    image: './assets/watches/rolex_daytona_everose.png'
   });
 
   useEffect(() => {
@@ -112,7 +112,7 @@ export default function AdminDashboardPage() {
       strap: 'Oyster Everose Gold Bracelet',
       tagline: 'The quintessential tool watch.',
       description: 'Manufactured according to the highest Geneva horology standards.',
-      image: '/assets/watches/rolex_daytona_everose.png'
+      image: './assets/watches/rolex_daytona_everose.png'
     });
     setIsWatchModalOpen(true);
   };
@@ -137,7 +137,7 @@ export default function AdminDashboardPage() {
       strap: watch.strap || '',
       tagline: watch.tagline || '',
       description: watch.description || '',
-      image: watch.image || (watch.images && watch.images[0]) || '/assets/watches/raymond_weil_basquiat.png'
+      image: watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'
     });
     setIsWatchModalOpen(true);
   };
@@ -475,7 +475,7 @@ export default function AdminDashboardPage() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {watches.map(watch => {
-                  const watchImg = watch.image || (watch.images && watch.images[0]) || '/assets/watches/raymond_weil_basquiat.png';
+                  const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png';
 
                   return (
                     <tr key={watch.id} className="hover:bg-white/5 transition-colors">
@@ -743,7 +743,7 @@ export default function AdminDashboardPage() {
                           src={watchForm.image}
                           alt="Watch preview"
                           className="max-h-full max-w-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]"
-                          onError={(e) => { e.target.src = '/assets/watches/raymond_weil_basquiat.png'; }}
+                          onError={(e) => { e.target.src = './assets/watches/raymond_weil_basquiat.png'; }}
                         />
                       ) : (
                         <span className="text-neutral-500 text-xs">No Image Attached</span>
@@ -764,24 +764,24 @@ export default function AdminDashboardPage() {
                           onChange={(e) => setWatchForm({ ...watchForm, image: e.target.value })}
                           className="w-full bg-[#141414] border border-white/15 rounded-lg px-3 py-2.5 text-white text-xs focus:outline-none focus:border-[#E5C158]"
                         >
-                          <option value="/assets/watches/rolex_daytona_everose.png">Rolex Cosmograph Daytona Everose (4K PNG)</option>
-                          <option value="/assets/watches/rolex_daytona.png">Rolex Daytona Chronograph Oystersteel (4K PNG)</option>
-                          <option value="/assets/watches/raymond_weil_basquiat.png">Raymond Weil Freelancer Basquiat™ (4K PNG)</option>
-                          <option value="/assets/watches/jlc_polaris_perpetual.png">Jaeger-LeCoultre Polaris Perpetual (4K PNG)</option>
-                          <option value="/assets/watches/jlc_master_control.png">Jaeger-LeCoultre Master Control (4K PNG)</option>
-                          <option value="/assets/watches/jlc_master_ultra_thin.png">Jaeger-LeCoultre Master Ultra Thin (4K PNG)</option>
-                          <option value="/assets/watches/patek_5260_rainbow.png">Patek Philippe 5260 Rainbow (4K PNG)</option>
-                          <option value="/assets/watches/patek_5524g_pilot.png">Patek Philippe 5524G Calatrava Pilot (4K PNG)</option>
-                          <option value="/assets/watches/patek_5326g_annual.png">Patek Philippe 5326G Annual Calendar (4K PNG)</option>
-                          <option value="/assets/watches/patek_5304_repeater.png">Patek Philippe 5304/301R Minute Repeater (4K PNG)</option>
-                          <option value="/assets/watches/patek_5531g_world_time.png">Patek Philippe 5531G World Time (4K PNG)</option>
-                          <option value="/assets/watches/patek_5316_platinum.png">Patek Philippe 5316/50P Platinum (4K PNG)</option>
-                          <option value="/assets/watches/patek_5204r_chronograph.png">Patek Philippe 5204R Split-Seconds Chronograph (4K PNG)</option>
-                          <option value="/assets/watches/ap_royal_oak_openworked.png">Audemars Piguet Royal Oak Openworked (4K PNG)</option>
-                          <option value="/assets/watches/vc_overseas_skeleton.png">Vacheron Constantin Overseas Skeleton (4K PNG)</option>
-                          <option value="/assets/watches/cartier_santos_skeleton.png">Cartier Santos Skeleton (4K PNG)</option>
-                          <option value="/assets/watches/omega_speedmaster_moon.png">Omega Speedmaster Moonwatch (4K PNG)</option>
-                          <option value="/assets/watches/leather_strap.png">Handcrafted Alligator Leather Strap (4K PNG)</option>
+                          <option value="./assets/watches/rolex_daytona_everose.png">Rolex Cosmograph Daytona Everose (4K PNG)</option>
+                          <option value="./assets/watches/rolex_daytona.png">Rolex Daytona Chronograph Oystersteel (4K PNG)</option>
+                          <option value="./assets/watches/raymond_weil_basquiat.png">Raymond Weil Freelancer Basquiat™ (4K PNG)</option>
+                          <option value="./assets/watches/jlc_polaris_perpetual.png">Jaeger-LeCoultre Polaris Perpetual (4K PNG)</option>
+                          <option value="./assets/watches/jlc_master_control.png">Jaeger-LeCoultre Master Control (4K PNG)</option>
+                          <option value="./assets/watches/jlc_master_ultra_thin.png">Jaeger-LeCoultre Master Ultra Thin (4K PNG)</option>
+                          <option value="./assets/watches/patek_5260_rainbow.png">Patek Philippe 5260 Rainbow (4K PNG)</option>
+                          <option value="./assets/watches/patek_5524g_pilot.png">Patek Philippe 5524G Calatrava Pilot (4K PNG)</option>
+                          <option value="./assets/watches/patek_5326g_annual.png">Patek Philippe 5326G Annual Calendar (4K PNG)</option>
+                          <option value="./assets/watches/patek_5304_repeater.png">Patek Philippe 5304/301R Minute Repeater (4K PNG)</option>
+                          <option value="./assets/watches/patek_5531g_world_time.png">Patek Philippe 5531G World Time (4K PNG)</option>
+                          <option value="./assets/watches/patek_5316_platinum.png">Patek Philippe 5316/50P Platinum (4K PNG)</option>
+                          <option value="./assets/watches/patek_5204r_chronograph.png">Patek Philippe 5204R Split-Seconds Chronograph (4K PNG)</option>
+                          <option value="./assets/watches/ap_royal_oak_openworked.png">Audemars Piguet Royal Oak Openworked (4K PNG)</option>
+                          <option value="./assets/watches/vc_overseas_skeleton.png">Vacheron Constantin Overseas Skeleton (4K PNG)</option>
+                          <option value="./assets/watches/cartier_santos_skeleton.png">Cartier Santos Skeleton (4K PNG)</option>
+                          <option value="./assets/watches/omega_speedmaster_moon.png">Omega Speedmaster Moonwatch (4K PNG)</option>
+                          <option value="./assets/watches/leather_strap.png">Handcrafted Alligator Leather Strap (4K PNG)</option>
                         </select>
                         <p className="text-[10px] text-neutral-400">All 18 vault cutouts are isolated against transparent alpha channels.</p>
                       </div>

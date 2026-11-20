@@ -195,7 +195,7 @@ export default function ProfilePage() {
                   {order.items?.map((item, idx) => (
                     <div key={idx} className="py-3 flex items-center justify-between text-xs">
                       <div className="flex items-center space-x-4">
-                        <img src={item.image || '/assets/watches/raymond_weil_basquiat.png'} alt="" className="w-12 h-12 object-contain rounded-xl border border-white/10 bg-[#141414] p-1" />
+                        <img src={item.image || './assets/watches/raymond_weil_basquiat.png'} alt="" className="w-12 h-12 object-contain rounded-xl border border-white/10 bg-[#141414] p-1" />
                         <div>
                           <span className="text-[10px] font-bold text-luxury-gold uppercase">{item.brand}</span>
                           <h4 className="font-semibold text-slate-200">{item.name}</h4>

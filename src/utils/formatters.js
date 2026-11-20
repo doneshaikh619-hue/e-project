@@ -16,3 +16,13 @@ export function formatDate(dateString) {
     day: 'numeric'
   });
 }
+
+export function getAssetUrl(path) {
+  if (!path || typeof path !== 'string') return path || '';
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:') || path.startsWith('blob:')) {
+    return path;
+  }
+  if (path.startsWith('/assets/')) return '.' + path;
+  if (path.startsWith('assets/')) return './' + path;
+  return path;
+}

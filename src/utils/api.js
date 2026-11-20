@@ -1,6 +1,26 @@
-import { initialWatches, initialReviews, initialOrders, initialUsers, initialFAQs } from '../../server/seedData.js';
+import { watchesData as initialWatches } from '../data/watchesData.js';
+import { initialReviews, initialOrders, initialUsers, initialFAQs } from '../../server/seedData.js';
 
 const API_BASE = '/api';
+
+export function normalizeAssetPath(p) {
+  if (!p || typeof p !== 'string') return p;
+  if (p.startsWith('http://') || p.startsWith('https://') || p.startsWith('data:') || p.startsWith('blob:')) {
+    return p;
+  }
+  if (p.startsWith('/assets/')) return '.' + p;
+  if (p.startsWith('assets/')) return './' + p;
+  return p;
+}
+
+export function sanitizeWatch(w) {
+  if (!w) return w;
+  return {
+    ...w,
+    image: normalizeAssetPath(w.image),
+    images: Array.isArray(w.images) ? w.images.map(normalizeAssetPath) : [normalizeAssetPath(w.image)]
+  };
+}
 
 // Helper to safely fetch with fallback
 async function request(endpoint, options = {}, fallbackFn = null) {
@@ -42,8 +62,18 @@ const setLocalData = (key, val) => {
   } catch (e) {}
 };
 
-// INITIALIZE LOCAL STORE IF EMPTY
-if (!getLocalData('watches', null)) setLocalData('watches', initialWatches);
+// INITIALIZE LOCAL STORE IF EMPTY OR OUTDATED
+try {
+  const existingWatches = getLocalData('watches', null);
+  const needsRefresh = !existingWatches || 
+    !existingWatches.some(w => w.id === 'wh-basquiat') ||
+    existingWatches.some(w => w.image && w.image.startsWith('/assets/'));
+    
+  if (needsRefresh) {
+    setLocalData('watches', initialWatches.map(sanitizeWatch));
+  }
+} catch (e) {}
+
 if (!getLocalData('reviews', null)) setLocalData('reviews', initialReviews);
 if (!getLocalData('orders', null)) setLocalData('orders', initialOrders);
 if (!getLocalData('users', null)) setLocalData('users', initialUsers);
@@ -53,7 +83,7 @@ export const api = {
   getWatches: async (params = {}) => {
     const query = new URLSearchParams(params).toString();
     return request(`/watches?${query}`, { method: 'GET' }, () => {
-      let watches = getLocalData('watches', initialWatches);
+      let watches = (getLocalData('watches', initialWatches) || []).map(sanitizeWatch);
       const { search, category, brand, minPrice, maxPrice, sortBy, gender, inStock } = params;
 
       if (search) {
@@ -86,16 +116,26 @@ export const api = {
       else if (sortBy === 'bestseller') watches.sort((a, b) => (b.bestseller ? 1 : 0) - (a.bestseller ? 1 : 0));
 
       return { success: true, count: watches.length, data: watches };
+    }).then(res => {
+      if (res && res.data && Array.isArray(res.data)) {
+        res.data = res.data.map(sanitizeWatch);
+      }
+      return res;
     });
   },
 
   getWatchById: async (id) => {
     return request(`/watches/${id}`, { method: 'GET' }, () => {
-      const watches = getLocalData('watches', initialWatches);
+      const watches = (getLocalData('watches', initialWatches) || []).map(sanitizeWatch);
       const watch = watches.find(w => w.id === id);
       if (!watch) return { success: false, message: 'Timepiece not found' };
       const reviews = getLocalData('reviews', initialReviews).filter(r => r.watchId === id);
-      return { success: true, data: { ...watch, reviews } };
+      return { success: true, data: { ...sanitizeWatch(watch), reviews } };
+    }).then(res => {
+      if (res && res.data) {
+        res.data = sanitizeWatch(res.data);
+      }
+      return res;
     });
   },
 

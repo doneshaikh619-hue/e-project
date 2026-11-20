@@ -54,7 +54,7 @@ app.post('/api/upload-image', (req, res) => {
     const targetPath = path.join(targetDir, newFilename);
     fs.writeFileSync(targetPath, buffer);
 
-    const relativeUrl = `/assets/watches/${newFilename}`;
+    const relativeUrl = `./assets/watches/${newFilename}`;
     res.json({
       success: true,
       message: 'Image uploaded successfully to vault assets',

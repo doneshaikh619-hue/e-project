@@ -101,9 +101,9 @@ export default function ServicingSection({ onOpenAppointmentModal }) {
                 playsInline
                 className="w-full h-full object-cover rounded-2xl filter contrast-110"
               >
-                <source src="/assets/videos/servicing_movement.mp4" type="video/mp4" />
+                <source src="./assets/videos/servicing_movement.mp4" type="video/mp4" />
                 <img
-                  src="/assets/timuse/editorial_servicing_wrist.jpg"
+                  src="./assets/timuse/editorial_servicing_wrist.jpg"
                   alt="Swiss mechanical movement"
                   className="w-full h-full object-cover"
                 />
@@ -116,7 +116,7 @@ export default function ServicingSection({ onOpenAppointmentModal }) {
           ) : (
             <div className="relative w-full h-full">
               <img
-                src="/assets/timuse/editorial_servicing_wrist.jpg"
+                src="./assets/timuse/editorial_servicing_wrist.jpg"
                 alt="Model wrist wearing gold watch with tailored blazer"
                 className="w-full h-full object-cover filter contrast-105"
               />

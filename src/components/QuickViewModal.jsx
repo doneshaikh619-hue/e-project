@@ -18,7 +18,7 @@ export default function QuickViewModal() {
   const isFavorited = isInWishlist(quickViewWatch.id);
   const images = quickViewWatch.images?.length 
     ? quickViewWatch.images 
-    : [quickViewWatch.image || '/assets/watches/raymond_weil_basquiat.png'];
+    : [quickViewWatch.image || './assets/watches/raymond_weil_basquiat.png'];
 
   const handleAddToCart = () => {
     addToCart(quickViewWatch, quantity);
