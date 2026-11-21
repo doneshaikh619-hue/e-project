@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useUI } from '../context/UIContext.jsx';
 import { api } from '../utils/api.js';
-import { ShieldCheck, Lock, Mail, User, Phone, Sparkles, ArrowRight, KeyRound, Eye, EyeOff } from 'lucide-react';
+import { ShieldCheck, Lock, Mail, User, Phone, Sparkles, ArrowRight, KeyRound, Eye, EyeOff, Crown, UserCheck } from 'lucide-react';
 
 export default function AuthPage() {
   const { user, login, register, quickLogin, isAuthenticated } = useAuth();
@@ -180,7 +180,10 @@ export default function AuthPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-neutral-300">
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-left space-y-1.5 hover:border-[#E5C158]/40 transition-colors">
             <div className="text-[#E5C158] font-bold flex items-center justify-between">
-              <span>👑 Master Admin:</span>
+              <span className="flex items-center space-x-1.5">
+                <Crown className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
+                <span>Master Admin:</span>
+              </span>
               <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-[#E5C158]/20 text-[#E5C158]">Full Access</span>
             </div>
             <div className="font-mono text-[10px] text-white">admin@timuse.luxury</div>
@@ -205,7 +208,10 @@ export default function AuthPage() {
 
           <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-left space-y-1.5 hover:border-white/30 transition-colors">
             <div className="text-white font-bold flex items-center justify-between">
-              <span>👤 VIP Client:</span>
+              <span className="flex items-center space-x-1.5">
+                <UserCheck className="w-3.5 h-3.5 text-neutral-300 shrink-0" />
+                <span>VIP Client:</span>
+              </span>
               <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-white/10 text-neutral-400">Buyer</span>
             </div>
             <div className="font-mono text-[10px] text-white">client@timuse.luxury</div>

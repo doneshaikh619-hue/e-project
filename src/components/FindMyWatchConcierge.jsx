@@ -25,7 +25,7 @@ export default function FindMyWatchConcierge() {
   const { toggleWishlist, isInWishlist } = useWishlist();
 
   // Mode: 'matrix' (floating search overview) or 'split' (active discovery view)
-  const [viewMode, setViewMode] = useState('split');
+  const [viewMode, setViewMode] = useState('matrix');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedStyle, setSelectedStyle] = useState('Classic and Minimalist');
   const [isAiDrawerOpen, setIsAiDrawerOpen] = useState(true);
@@ -116,13 +116,13 @@ export default function FindMyWatchConcierge() {
             {/* Column 1 */}
             <div className="flex flex-col space-y-12">
               <img src="./assets/watches/jlc_polaris_perpetual.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
-              <img src="./assets/watches/leather_strap.webp" alt="" loading="lazy" decoding="async" className="w-32 h-32 object-contain" />
+              <img src="./assets/watches/patek_5204r_chronograph.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
               <img src="./assets/watches/patek_5260_rainbow.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
             </div>
             {/* Column 2 */}
             <div className="flex flex-col space-y-12 translate-y-8">
               <img src="./assets/watches/jlc_master_control.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
-              <img src="./assets/watches/leather_strap.webp" alt="" loading="lazy" decoding="async" className="w-32 h-32 object-contain" />
+              <img src="./assets/watches/cartier_santos_skeleton.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
               <img src="./assets/watches/patek_5326g_annual.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
             </div>
             {/* Column 3 */}
@@ -141,7 +141,7 @@ export default function FindMyWatchConcierge() {
             <div className="hidden sm:flex flex-col space-y-12">
               <img src="./assets/watches/patek_5524g_pilot.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
               <img src="./assets/watches/vc_overseas_skeleton.webp" alt="" loading="lazy" decoding="async" className="w-32 h-32 object-contain" />
-              <img src="./assets/watches/jlc_polaris_perpetual.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
+              <img src="./assets/watches/omega_speedmaster_moon.webp" alt="" loading="lazy" decoding="async" className="w-36 h-36 object-contain" />
             </div>
           </div>
 
@@ -226,9 +226,11 @@ export default function FindMyWatchConcierge() {
 
               <button
                 onClick={() => setViewMode('matrix')}
-                className="text-[11px] text-[#8A8A8A] hover:text-white underline"
+                className="px-3.5 py-1.5 rounded-xl border border-white/15 hover:border-[#E5C158] hover:bg-white/5 text-[11px] text-white/80 hover:text-white transition-all flex items-center space-x-1.5"
+                title="Return to Floating Matrix Search"
               >
-                Reset Matrix
+                <RotateCcw className="w-3 h-3 text-[#E5C158]" />
+                <span>Return to Matrix</span>
               </button>
             </div>
           </div>
