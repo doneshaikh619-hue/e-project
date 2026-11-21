@@ -2,15 +2,16 @@ import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useUI } from '../context/UIContext.jsx';
 import { api } from '../utils/api.js';
-import { ShieldCheck, Lock, Mail, User, Phone, Sparkles, ArrowRight, KeyRound } from 'lucide-react';
+import { ShieldCheck, Lock, Mail, User, Phone, Sparkles, ArrowRight, KeyRound, Eye, EyeOff } from 'lucide-react';
 
 export default function AuthPage() {
-  const { login, register, quickLogin, isAuthenticated } = useAuth();
+  const { user, login, register, quickLogin, isAuthenticated } = useAuth();
   const { navigateTo, showToast, authReturnPage, setAuthReturnPage } = useUI();
 
   const [mode, setMode] = useState('login'); // 'login' | 'register' | 'forgot'
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
@@ -26,6 +27,8 @@ export default function AuthPage() {
       const returnTarget = authReturnPage;
       setAuthReturnPage(null);
       navigateTo(returnTarget);
+    } else if (user?.role === 'admin') {
+      navigateTo('admin');
     } else {
       navigateTo('profile');
     }
@@ -39,14 +42,16 @@ export default function AuthPage() {
 
     try {
       if (mode === 'login') {
-        await login(email, password);
+        const res = await login(email, password);
         showToast('Welcome to the TIMUSE private salon.');
         if (authReturnPage) {
           const returnTarget = authReturnPage;
           setAuthReturnPage(null);
           navigateTo(returnTarget);
+        } else if (res?.user?.role === 'admin' || email.toLowerCase().includes('admin')) {
+          navigateTo('admin');
         } else {
-          navigateTo('home');
+          navigateTo('profile');
         }
       } else if (mode === 'register') {
         await register({ name, email, password, phone, role: 'customer' });
@@ -56,7 +61,7 @@ export default function AuthPage() {
           setAuthReturnPage(null);
           navigateTo(returnTarget);
         } else {
-          navigateTo('home');
+          navigateTo('profile');
         }
       }
     } catch (err) {
@@ -107,8 +112,19 @@ export default function AuthPage() {
   };
 
   const handleDemoLogin = async (role) => {
+    setErrorMsg('');
+    setLoading(true);
     try {
-      await quickLogin(role);
+      if (role === 'admin') {
+        setEmail('admin@timuse.luxury');
+        setPassword('TimuseAdmin2026!');
+      } else {
+        setEmail('client@timuse.luxury');
+        setPassword('client123');
+      }
+      setMode('login');
+
+      const res = await quickLogin(role);
       showToast(`Signed in as ${role === 'admin' ? 'Master Executive Director' : 'VIP Client'}`);
       if (authReturnPage) {
         const returnTarget = authReturnPage;
@@ -117,10 +133,26 @@ export default function AuthPage() {
       } else if (role === 'admin') {
         navigateTo('admin');
       } else {
-        navigateTo('home');
+        navigateTo('profile');
       }
     } catch (err) {
-      setErrorMsg(err.message);
+      setErrorMsg(err.message || 'Authentication failed. Please verify credentials.');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleFillCredentials = (role) => {
+    setErrorMsg('');
+    setMode('login');
+    if (role === 'admin') {
+      setEmail('admin@timuse.luxury');
+      setPassword('TimuseAdmin2026!');
+      showToast('Admin credentials loaded into login form.');
+    } else {
+      setEmail('client@timuse.luxury');
+      setPassword('client123');
+      showToast('VIP Client credentials loaded into login form.');
     }
   };
 
@@ -146,30 +178,54 @@ export default function AuthPage() {
           <span>Aptech Evaluation Credentials (Database-Verified)</span>
         </span>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] text-neutral-300">
-          <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-left space-y-1">
-            <div className="text-[#E5C158] font-bold">👑 Master Admin:</div>
+          <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-left space-y-1.5 hover:border-[#E5C158]/40 transition-colors">
+            <div className="text-[#E5C158] font-bold flex items-center justify-between">
+              <span>👑 Master Admin:</span>
+              <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-[#E5C158]/20 text-[#E5C158]">Full Access</span>
+            </div>
             <div className="font-mono text-[10px] text-white">admin@timuse.luxury</div>
-            <div className="font-mono text-[10px] text-neutral-400">Pass: <span className="text-white">TimuseAdmin2026!</span></div>
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('admin')}
-              className="w-full mt-1.5 py-1 px-2 rounded-lg bg-[#E5C158] hover:bg-[#d4af37] text-[#050505] text-[10px] font-bold uppercase transition-colors"
-            >
-              Sign In as Admin
-            </button>
+            <div className="font-mono text-[10px] text-neutral-400">Pass: <span className="text-white font-semibold">TimuseAdmin2026!</span></div>
+            <div className="flex gap-1.5 pt-1">
+              <button
+                type="button"
+                onClick={() => handleFillCredentials('admin')}
+                className="flex-1 py-1.5 px-2 rounded-lg bg-white/10 hover:bg-white/20 text-neutral-200 text-[10px] font-semibold uppercase transition-colors"
+              >
+                Fill Form
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('admin')}
+                className="flex-1 py-1.5 px-2 rounded-lg bg-[#E5C158] hover:bg-[#d4af37] text-[#050505] text-[10px] font-bold uppercase transition-colors shadow-md"
+              >
+                Sign In
+              </button>
+            </div>
           </div>
 
-          <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 text-left space-y-1">
-            <div className="text-white font-bold">👤 VIP Client:</div>
+          <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-left space-y-1.5 hover:border-white/30 transition-colors">
+            <div className="text-white font-bold flex items-center justify-between">
+              <span>👤 VIP Client:</span>
+              <span className="text-[9px] uppercase px-1.5 py-0.5 rounded bg-white/10 text-neutral-400">Buyer</span>
+            </div>
             <div className="font-mono text-[10px] text-white">client@timuse.luxury</div>
-            <div className="font-mono text-[10px] text-neutral-400">Pass: <span className="text-white">client123</span></div>
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('customer')}
-              className="w-full mt-1.5 py-1 px-2 rounded-lg bg-white/10 hover:bg-white/20 text-[#E5C158] text-[10px] font-bold uppercase border border-[#E5C158]/30 transition-colors"
-            >
-              Sign In as Client
-            </button>
+            <div className="font-mono text-[10px] text-neutral-400">Pass: <span className="text-white font-semibold">client123</span></div>
+            <div className="flex gap-1.5 pt-1">
+              <button
+                type="button"
+                onClick={() => handleFillCredentials('customer')}
+                className="flex-1 py-1.5 px-2 rounded-lg bg-white/10 hover:bg-white/20 text-neutral-200 text-[10px] font-semibold uppercase transition-colors"
+              >
+                Fill Form
+              </button>
+              <button
+                type="button"
+                onClick={() => handleDemoLogin('customer')}
+                className="flex-1 py-1.5 px-2 rounded-lg bg-[#E5C158]/20 hover:bg-[#E5C158]/30 text-[#E5C158] text-[10px] font-bold uppercase border border-[#E5C158]/30 transition-colors"
+              >
+                Sign In
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -243,8 +299,8 @@ export default function AuthPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="client@watchhub.luxury"
-                  className="w-full bg-luxury-900 border border-white/10 rounded-xl pl-10 pr-3 py-2.5 text-slate-100 focus:outline-none focus:border-luxury-gold"
+                  placeholder="admin@timuse.luxury or client@timuse.luxury"
+                  className="w-full bg-[#141414] border border-white/10 rounded-xl pl-10 pr-3 py-2.5 text-slate-100 placeholder:text-neutral-500 focus:outline-none focus:border-[#E5C158]"
                 />
               </div>
             </div>
@@ -256,7 +312,7 @@ export default function AuthPage() {
                   <button
                     type="button"
                     onClick={() => { setMode('forgot'); setErrorMsg(''); }}
-                    className="text-[11px] text-luxury-gold hover:underline"
+                    className="text-[11px] text-[#E5C158] hover:underline"
                   >
                     Forgot Passphrase?
                   </button>
@@ -265,13 +321,21 @@ export default function AuthPage() {
               <div className="relative">
                 <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full bg-luxury-900 border border-white/10 rounded-xl pl-10 pr-3 py-2.5 text-slate-100 focus:outline-none focus:border-luxury-gold"
+                  className="w-full bg-[#141414] border border-white/10 rounded-xl pl-10 pr-10 py-2.5 text-slate-100 placeholder:text-neutral-500 focus:outline-none focus:border-[#E5C158]"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors"
+                  title={showPassword ? 'Hide Passphrase' : 'Show Passphrase'}
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
               </div>
             </div>
 

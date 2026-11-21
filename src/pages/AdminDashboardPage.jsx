@@ -67,7 +67,7 @@ export default function AdminDashboardPage() {
 
   useEffect(() => {
     loadAllData();
-  }, []);
+  }, [isAdmin, isAuthenticated]);
 
   const loadAllData = async () => {
     setLoading(true);
@@ -270,7 +270,14 @@ export default function AdminDashboardPage() {
             <div className="text-neutral-400">Password: <span className="text-[#E5C158] font-semibold">TimuseAdmin2026!</span></div>
           </div>
           <button
-            onClick={() => quickLogin('admin')}
+            onClick={async () => {
+              try {
+                await quickLogin('admin');
+                showToast('Executive Director clearance authenticated.', 'gold');
+              } catch (e) {
+                showToast(e.message || 'Login failed', 'warning');
+              }
+            }}
             className="w-full py-3 bg-[#E5C158] hover:bg-[#d4af37] text-[#050505] rounded-xl text-xs font-bold uppercase tracking-wider transition-all shadow-[0_4px_20px_rgba(229,193,88,0.3)] flex items-center justify-center space-x-2"
           >
             <span>Authenticate as Executive Director</span>

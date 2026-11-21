@@ -487,9 +487,9 @@ export const initialOrders = [
 export const initialUsers = [
   {
     id: "usr-001",
-    name: "Henri Stern",
-    email: "admin@watchhub.luxury",
-    password: "admin123", // For evaluation demo
+    name: "Master Executive Director",
+    email: "admin@timuse.luxury",
+    password: "TimuseAdmin2026!",
     role: "admin",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
     phone: "+41 22 819 12 00",
@@ -498,9 +498,31 @@ export const initialUsers = [
   },
   {
     id: "usr-002",
+    name: "Lord Arthur Pendelton",
+    email: "client@timuse.luxury",
+    password: "client123",
+    role: "customer",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
+    phone: "+44 20 7946 0912",
+    address: "Mayfair, Grosvenor Square, London W1K 6JP, UK",
+    createdAt: "2026-03-15"
+  },
+  {
+    id: "usr-003",
+    name: "Henri Stern",
+    email: "admin@watchhub.luxury",
+    password: "admin123",
+    role: "admin",
+    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+    phone: "+41 22 819 12 00",
+    address: "Rue du Stand 6, 1204 Geneva, Switzerland",
+    createdAt: "2026-01-01"
+  },
+  {
+    id: "usr-004",
     name: "Arthur Pendelton",
     email: "client@watchhub.luxury",
-    password: "user123", // For evaluation demo
+    password: "user123",
     role: "customer",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
     phone: "+44 20 7946 0912",
