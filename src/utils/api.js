@@ -8,9 +8,13 @@ export function normalizeAssetPath(p) {
   if (p.startsWith('http://') || p.startsWith('https://') || p.startsWith('data:') || p.startsWith('blob:')) {
     return p;
   }
-  if (p.startsWith('/assets/')) return '.' + p;
-  if (p.startsWith('assets/')) return './' + p;
-  return p;
+  let path = p;
+  if (path.startsWith('/assets/')) path = '.' + path;
+  if (path.startsWith('assets/')) path = './' + path;
+  if (path.includes('/assets/watches/') && path.endsWith('.png')) {
+    path = path.replace(/\.png$/, '.webp');
+  }
+  return path;
 }
 
 export function sanitizeWatch(w) {
@@ -67,7 +71,7 @@ try {
   const existingWatches = getLocalData('watches', null);
   const needsRefresh = !existingWatches || 
     !existingWatches.some(w => w.id === 'wh-basquiat') ||
-    existingWatches.some(w => w.image && w.image.startsWith('/assets/'));
+    existingWatches.some(w => w.image && (w.image.startsWith('/assets/') || w.image.endsWith('.png')));
     
   if (needsRefresh) {
     setLocalData('watches', initialWatches.map(sanitizeWatch));

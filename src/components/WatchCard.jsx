@@ -38,7 +38,7 @@ export default function WatchCard({ watch }) {
     ? Math.round(((watch.originalPrice - watch.price) / watch.originalPrice) * 100)
     : null;
 
-  const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png';
+  const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp';
 
   return (
     <div
@@ -91,6 +91,8 @@ export default function WatchCard({ watch }) {
         <img
           src={watchImg}
           alt={watch.name}
+          loading="lazy"
+          decoding="async"
           className="w-44 h-44 sm:w-52 sm:h-52 object-contain transition-transform duration-700 ease-out group-hover:scale-105 filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
         />
       </div>

@@ -40,8 +40,10 @@ export default function HistoricalModels() {
             >
               <div className="relative py-8 flex items-center justify-center">
                 <img
-                  src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'}
+                  src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp'}
                   alt={watch.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-44 h-44 sm:w-52 sm:h-52 object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]"
                 />
               </div>

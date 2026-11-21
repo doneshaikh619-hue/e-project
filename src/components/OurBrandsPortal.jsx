@@ -12,6 +12,10 @@ export default function OurBrandsPortal() {
     setHoveredBrandName(brand.name);
     const vid = videoRefs.current[brand.name];
     if (vid) {
+      if (!vid.src || !vid.src.includes('brand_light_streak.mp4')) {
+        vid.src = './assets/videos/brand_light_streak.mp4';
+        vid.load();
+      }
       vid.currentTime = 0;
       vid.play().catch(() => {});
     }
@@ -59,13 +63,14 @@ export default function OurBrandsPortal() {
                   loop
                   muted
                   playsInline
-                  preload="auto"
+                  preload="none"
                   className="w-full h-full object-cover filter brightness-115 contrast-125"
                 >
-                  <source src="./assets/videos/brand_light_streak.mp4" type="video/mp4" />
                   <img
                     src={brand.ribbon || "./assets/timuse/patek_brand_ribbon.jpg"}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover"
                   />
                 </video>
@@ -99,6 +104,8 @@ export default function OurBrandsPortal() {
                   <img
                     src={brand.heroWatch}
                     alt={brand.name}
+                    loading="lazy"
+                    decoding="async"
                     className="w-24 h-24 sm:w-36 sm:h-36 object-contain filter drop-shadow-[0_15px_30px_rgba(0,0,0,0.95)] -my-6 transition-transform group-hover:scale-105"
                   />
                 </div>

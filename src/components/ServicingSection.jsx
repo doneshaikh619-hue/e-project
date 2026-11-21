@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useUI } from '../context/UIContext.jsx';
 import { ChevronDown, ArrowRight, ShieldCheck, Clock, CheckCircle2, RotateCw } from 'lucide-react';
 
@@ -6,6 +6,31 @@ export default function ServicingSection({ onOpenAppointmentModal }) {
   const { showToast } = useUI();
   const [selectedModel, setSelectedModel] = useState('');
   const [visualMode, setVisualMode] = useState('movement'); // 'movement' | 'wrist'
+  const videoRef = useRef(null);
+
+  // Lazy load video only when section scrolls into viewport to avoid initial network stall
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && videoRef.current) {
+            if (!videoRef.current.src || !videoRef.current.src.includes('servicing_movement.mp4')) {
+              videoRef.current.src = './assets/videos/servicing_movement.mp4';
+              videoRef.current.load();
+            }
+            videoRef.current.play().catch(() => {});
+          } else if (videoRef.current && !videoRef.current.paused) {
+            videoRef.current.pause();
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    const sectionEl = document.getElementById('servicing-section');
+    if (sectionEl) observer.observe(sectionEl);
+    return () => observer.disconnect();
+  }, []);
 
   const modelsList = [
     'Patek Philippe Grand Complications',
@@ -95,16 +120,19 @@ export default function ServicingSection({ onOpenAppointmentModal }) {
           {visualMode === 'movement' ? (
             <div className="relative w-full h-full flex items-center justify-center p-4">
               <video
-                autoPlay
+                ref={videoRef}
                 loop
                 muted
                 playsInline
+                preload="none"
+                poster="./assets/timuse/editorial_servicing_wrist.jpg"
                 className="w-full h-full object-cover rounded-2xl filter contrast-110"
               >
-                <source src="./assets/videos/servicing_movement.mp4" type="video/mp4" />
                 <img
                   src="./assets/timuse/editorial_servicing_wrist.jpg"
                   alt="Swiss mechanical movement"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
               </video>
@@ -118,6 +146,8 @@ export default function ServicingSection({ onOpenAppointmentModal }) {
               <img
                 src="./assets/timuse/editorial_servicing_wrist.jpg"
                 alt="Model wrist wearing gold watch with tailored blazer"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover filter contrast-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60" />

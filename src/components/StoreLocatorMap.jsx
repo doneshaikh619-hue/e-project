@@ -48,6 +48,8 @@ export default function StoreLocatorMap({ onOpenAppointmentModal }) {
                     <img
                       src={store.image}
                       alt={store.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     />
                   </div>
@@ -104,6 +106,8 @@ export default function StoreLocatorMap({ onOpenAppointmentModal }) {
               <img
                 src="./assets/timuse/stores_vector_map.jpg"
                 alt="Austin Dark Vector Map"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover filter contrast-125 opacity-75 group-hover:scale-102 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-radial-gradient from-transparent via-[#050505]/30 to-[#050505] pointer-events-none" />

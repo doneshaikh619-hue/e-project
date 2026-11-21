@@ -321,8 +321,10 @@ export default function CatalogPage() {
                 >
                   <div className="flex items-center space-x-6 w-full sm:w-auto">
                     <img
-                      src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'}
+                      src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp'}
                       alt={watch.name}
+                      loading="lazy"
+                      decoding="async"
                       className="w-24 h-24 object-contain rounded-xl border border-white/10 bg-[#141414] p-1.5"
                     />
                     <div>

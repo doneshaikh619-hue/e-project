@@ -22,7 +22,11 @@ export function getAssetUrl(path) {
   if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:') || path.startsWith('blob:')) {
     return path;
   }
-  if (path.startsWith('/assets/')) return '.' + path;
-  if (path.startsWith('assets/')) return './' + path;
-  return path;
+  let p = path;
+  if (p.startsWith('/assets/')) p = '.' + p;
+  if (p.startsWith('assets/')) p = './' + p;
+  if (p.includes('/assets/watches/') && p.endsWith('.png')) {
+    p = p.replace(/\.png$/, '.webp');
+  }
+  return p;
 }

@@ -29,7 +29,7 @@ export default function OrderConfirmationPage() {
         brand: "Raymond Weil",
         price: 4950,
         quantity: 1,
-        image: "./assets/watches/raymond_weil_basquiat.png"
+        image: "./assets/watches/raymond_weil_basquiat.webp"
       }
     ],
     subtotal: 4950,
@@ -129,7 +129,7 @@ export default function OrderConfirmationPage() {
               <div className="flex items-center space-x-4">
                 <div className="w-14 h-14 rounded-lg bg-[#141414] border border-white/10 p-1 flex items-center justify-center shrink-0">
                   <img
-                    src={item.image || './assets/watches/raymond_weil_basquiat.png'}
+                    src={item.image || './assets/watches/raymond_weil_basquiat.webp'}
                     alt={item.name}
                     className="w-full h-full object-contain filter drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
                   />

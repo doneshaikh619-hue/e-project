@@ -29,9 +29,9 @@
       "description": "The Freelancer Basquiat Special Edition is an energetic blend of raw street art aesthetics and Swiss horological mastery. Featuring the iconic Basquiat crown at 12 o'clock and chronograph dials with artistic strokes.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/raymond_weil_basquiat.png",
+      "image": "./assets/watches/raymond_weil_basquiat.webp",
       "images": [
-        "./assets/watches/raymond_weil_basquiat.png"
+        "./assets/watches/raymond_weil_basquiat.webp"
       ]
     },
     {
@@ -63,9 +63,9 @@
       "description": "The Polaris Perpetual Calendar enriches the sporting collection with one of horology's most complex complications, housing the in-house Calibre 868 in a robust pink gold case.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/jlc_polaris_perpetual.png",
+      "image": "./assets/watches/jlc_polaris_perpetual.webp",
       "images": [
-        "./assets/watches/jlc_polaris_perpetual.png"
+        "./assets/watches/jlc_polaris_perpetual.webp"
       ]
     },
     {
@@ -97,9 +97,9 @@
       "description": "The Master Control Calendar displays complete calendar indications: day, date, month, and poetic moon phases, featuring a jumping date hand between the 15th and 16th day.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/jlc_master_control.png",
+      "image": "./assets/watches/jlc_master_control.webp",
       "images": [
-        "./assets/watches/jlc_master_control.png"
+        "./assets/watches/jlc_master_control.webp"
       ]
     },
     {
@@ -131,9 +131,9 @@
       "description": "Master Ultra Thin exhibits extreme refinement in a 39mm pink gold case, presenting a power reserve indicator and pointer date on an eggshell dial.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/jlc_master_ultra_thin.png",
+      "image": "./assets/watches/jlc_master_ultra_thin.webp",
       "images": [
-        "./assets/watches/jlc_master_ultra_thin.png"
+        "./assets/watches/jlc_master_ultra_thin.webp"
       ]
     },
     {
@@ -165,9 +165,9 @@
       "description": "This monumental creation marries high jewellery with chiming grand complications, set with an array of multi-coloured sapphires and baguette diamonds.",
       "featured": true,
       "historical": true,
-      "image": "./assets/watches/patek_5260_rainbow.png",
+      "image": "./assets/watches/patek_5260_rainbow.webp",
       "images": [
-        "./assets/watches/patek_5260_rainbow.png"
+        "./assets/watches/patek_5260_rainbow.webp"
       ]
     },
     {
@@ -199,9 +199,9 @@
       "description": "The Calatrava Pilot Travel Time 5524G features a second time-zone indication coupled with local day/night apertures for globetrotting connoisseurs.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/patek_5524g_pilot.png",
+      "image": "./assets/watches/patek_5524g_pilot.webp",
       "images": [
-        "./assets/watches/patek_5524g_pilot.png"
+        "./assets/watches/patek_5524g_pilot.webp"
       ]
     },
     {
@@ -233,9 +233,9 @@
       "description": "The 5326G brings together the patented Annual Calendar and two-time-zone Travel Time display in a textured vintage-inspired dial with hobnail guilloché flanks.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/patek_5326g_annual.png",
+      "image": "./assets/watches/patek_5326g_annual.webp",
       "images": [
-        "./assets/watches/patek_5326g_annual.png"
+        "./assets/watches/patek_5326g_annual.webp"
       ]
     },
     {
@@ -267,9 +267,9 @@
       "description": "A masterpiece of transparency. The sapphire crystal dial showcases the intricate perpetual calendar mechanisms and the chiming hammers of the Calibre R 27.",
       "featured": true,
       "historical": true,
-      "image": "./assets/watches/patek_5304_repeater.png",
+      "image": "./assets/watches/patek_5304_repeater.webp",
       "images": [
-        "./assets/watches/patek_5304_repeater.png"
+        "./assets/watches/patek_5304_repeater.webp"
       ]
     },
     {
@@ -301,9 +301,9 @@
       "description": "The world's first minute repeater that always chimes local time according to the city aligned with 12 o'clock, embellished with a Grand Feu cloisonné enamel dial.",
       "featured": true,
       "historical": true,
-      "image": "./assets/watches/patek_5531g_world_time.png",
+      "image": "./assets/watches/patek_5531g_world_time.webp",
       "images": [
-        "./assets/watches/patek_5531g_world_time.png"
+        "./assets/watches/patek_5531g_world_time.webp"
       ]
     },
     {
@@ -335,9 +335,9 @@
       "description": "A pinnacle reference uniting five of horology's highest complications: minute repeater, tourbillon, perpetual calendar with retrograde date, and moon phases.",
       "featured": false,
       "historical": true,
-      "image": "./assets/watches/patek_5316_platinum.png",
+      "image": "./assets/watches/patek_5316_platinum.webp",
       "images": [
-        "./assets/watches/patek_5316_platinum.png"
+        "./assets/watches/patek_5316_platinum.webp"
       ]
     },
     {
@@ -369,9 +369,9 @@
       "description": "Pairing the Rattrapante split-seconds chronograph with a perpetual calendar, finished in warm 18k rose gold with an olive green sunburst face.",
       "featured": false,
       "historical": true,
-      "image": "./assets/watches/patek_5204r_chronograph.png",
+      "image": "./assets/watches/patek_5204r_chronograph.webp",
       "images": [
-        "./assets/watches/patek_5204r_chronograph.png"
+        "./assets/watches/patek_5204r_chronograph.webp"
       ]
     },
     {
@@ -403,9 +403,9 @@
       "description": "The Royal Oak Double Balance Wheel Openworked fixes the hairsprings on the same axis to dramatically increase stabilizing precision and visual artistry.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/ap_royal_oak_openworked.png",
+      "image": "./assets/watches/ap_royal_oak_openworked.webp",
       "images": [
-        "./assets/watches/ap_royal_oak_openworked.png"
+        "./assets/watches/ap_royal_oak_openworked.webp"
       ]
     },
     {
@@ -437,9 +437,9 @@
       "description": "The Cosmograph Daytona is an icon forever joined in name and function to high performance and motorsport circuits around the globe.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/rolex_daytona_everose.png",
+      "image": "./assets/watches/rolex_daytona_everose.webp",
       "images": [
-        "./assets/watches/rolex_daytona_everose.png"
+        "./assets/watches/rolex_daytona_everose.webp"
       ]
     },
     {
@@ -471,9 +471,9 @@
       "description": "The Overseas Perpetual Calendar Ultra-Thin skeleton brings together high complication mechanics with athletic spirit in an openworked pink gold silhouette.",
       "featured": true,
       "historical": false,
-      "image": "./assets/watches/vc_overseas_skeleton.png",
+      "image": "./assets/watches/vc_overseas_skeleton.webp",
       "images": [
-        "./assets/watches/vc_overseas_skeleton.png"
+        "./assets/watches/vc_overseas_skeleton.webp"
       ]
     },
     {
@@ -505,9 +505,9 @@
       "description": "Santos de Cartier skeleton watch featuring Roman numerals cleverly hollowed out to act as structural bridges for the manufacture calibre.",
       "featured": false,
       "historical": false,
-      "image": "./assets/watches/cartier_santos_skeleton.png",
+      "image": "./assets/watches/cartier_santos_skeleton.webp",
       "images": [
-        "./assets/watches/cartier_santos_skeleton.png"
+        "./assets/watches/cartier_santos_skeleton.webp"
       ]
     },
     {
@@ -539,9 +539,9 @@
       "description": "The Speedmaster Professional Moonwatch is one of the world's most iconic timepieces. Having been a part of all six moon landings.",
       "featured": false,
       "historical": false,
-      "image": "./assets/watches/omega_speedmaster_moon.png",
+      "image": "./assets/watches/omega_speedmaster_moon.webp",
       "images": [
-        "./assets/watches/omega_speedmaster_moon.png"
+        "./assets/watches/omega_speedmaster_moon.webp"
       ]
     }
   ],
@@ -622,7 +622,7 @@
           "brand": "Rolex",
           "price": 42500,
           "quantity": 1,
-          "image": "./assets/watches/rolex_daytona_everose.png"
+          "image": "./assets/watches/rolex_daytona_everose.webp"
         }
       ],
       "notes": "Private vault courier signature required upon handoff.",
@@ -657,7 +657,7 @@
           "brand": "Omega",
           "price": 7600,
           "quantity": 1,
-          "image": "./assets/watches/omega_speedmaster_moon.png"
+          "image": "./assets/watches/omega_speedmaster_moon.webp"
         }
       ],
       "notes": "Private vault courier signature required upon handoff.",
@@ -692,7 +692,7 @@
           "brand": "Patek Philippe",
           "price": 950000,
           "quantity": 1,
-          "image": "./assets/watches/patek_5316_platinum.png"
+          "image": "./assets/watches/patek_5316_platinum.webp"
         }
       ],
       "notes": "Private vault courier signature required upon handoff.",
@@ -727,7 +727,7 @@
           "brand": "Jaeger-LeCoultre",
           "price": 28500,
           "quantity": 1,
-          "image": "./assets/watches/jlc_master_control.png"
+          "image": "./assets/watches/jlc_master_control.webp"
         }
       ],
       "notes": "Private vault courier signature required upon handoff.",

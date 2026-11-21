@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Lenis from 'lenis';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { CartProvider } from './context/CartContext.jsx';
 import { WishlistProvider } from './context/WishlistContext.jsx';
@@ -27,6 +29,8 @@ import FAQSupportPage from './pages/FAQSupportPage.jsx';
 
 import { Sparkles } from 'lucide-react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function AppContent() {
   const { 
     currentPage, 
@@ -38,7 +42,7 @@ function AppContent() {
     openAppointment 
   } = useUI();
 
-  // Initialize buttery-smooth Lenis scrolling
+  // Initialize buttery-smooth Lenis scrolling synchronized with GSAP ScrollTrigger
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -48,16 +52,17 @@ function AppContent() {
       touchMultiplier: 1.5,
     });
 
-    let animationFrameId;
-    function raf(time) {
-      lenis.raf(time);
-      animationFrameId = requestAnimationFrame(raf);
-    }
+    lenis.on('scroll', ScrollTrigger.update);
 
-    animationFrameId = requestAnimationFrame(raf);
+    const updateLenis = (time) => {
+      lenis.raf(time * 1000);
+    };
+
+    gsap.ticker.add(updateLenis);
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      cancelAnimationFrame(animationFrameId);
+      gsap.ticker.remove(updateLenis);
       lenis.destroy();
     };
   }, []);

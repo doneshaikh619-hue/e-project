@@ -65,7 +65,7 @@ export default function WishlistPage() {
             >
               <div className="flex items-center space-x-4">
                 <img
-                  src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'}
+                  src={watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp'}
                   alt={watch.name}
                   onClick={() => navigateToProduct(watch.id)}
                   className="w-24 h-24 object-contain rounded-xl border border-white/10 bg-[#141414] p-1.5 cursor-pointer group-hover:scale-105 transition-transform"

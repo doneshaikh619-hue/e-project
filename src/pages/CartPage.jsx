@@ -83,7 +83,7 @@ export default function CartPage() {
           {/* Left Column: Cart Items Table */}
           <div className="lg:col-span-8 bg-[#0E0E0E] rounded-2xl p-6 border border-white/10 divide-y divide-white/10">
             {cartItems.map(({ watch, quantity }) => {
-              const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png';
+              const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp';
 
               return (
                 <div key={watch.id} className="py-6 flex flex-col sm:flex-row items-center justify-between gap-6">

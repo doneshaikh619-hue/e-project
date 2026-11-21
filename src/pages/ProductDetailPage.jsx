@@ -74,7 +74,7 @@ export default function ProductDetailPage() {
     );
   }
 
-  const images = watch.images?.length ? watch.images : [watch.image || './assets/watches/raymond_weil_basquiat.png'];
+  const images = watch.images?.length ? watch.images : [watch.image || './assets/watches/raymond_weil_basquiat.webp'];
   const isFavorited = isInWishlist(watch.id);
 
   const handleAddToCart = () => {

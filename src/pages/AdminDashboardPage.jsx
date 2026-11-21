@@ -137,7 +137,7 @@ export default function AdminDashboardPage() {
       strap: watch.strap || '',
       tagline: watch.tagline || '',
       description: watch.description || '',
-      image: watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'
+      image: watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp'
     });
     setIsWatchModalOpen(true);
   };
@@ -475,7 +475,7 @@ export default function AdminDashboardPage() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {watches.map(watch => {
-                  const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png';
+                  const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp';
 
                   return (
                     <tr key={watch.id} className="hover:bg-white/5 transition-colors">
@@ -743,7 +743,7 @@ export default function AdminDashboardPage() {
                           src={watchForm.image}
                           alt="Watch preview"
                           className="max-h-full max-w-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]"
-                          onError={(e) => { e.target.src = './assets/watches/raymond_weil_basquiat.png'; }}
+                          onError={(e) => { e.target.src = './assets/watches/raymond_weil_basquiat.webp'; }}
                         />
                       ) : (
                         <span className="text-neutral-500 text-xs">No Image Attached</span>
@@ -766,7 +766,7 @@ export default function AdminDashboardPage() {
                         >
                           <option value="./assets/watches/rolex_daytona_everose.png">Rolex Cosmograph Daytona Everose (4K PNG)</option>
                           <option value="./assets/watches/rolex_daytona.png">Rolex Daytona Chronograph Oystersteel (4K PNG)</option>
-                          <option value="./assets/watches/raymond_weil_basquiat.png">Raymond Weil Freelancer Basquiat™ (4K PNG)</option>
+                          <option value="./assets/watches/raymond_weil_basquiat.webp">Raymond Weil Freelancer Basquiat™ (4K PNG)</option>
                           <option value="./assets/watches/jlc_polaris_perpetual.png">Jaeger-LeCoultre Polaris Perpetual (4K PNG)</option>
                           <option value="./assets/watches/jlc_master_control.png">Jaeger-LeCoultre Master Control (4K PNG)</option>
                           <option value="./assets/watches/jlc_master_ultra_thin.png">Jaeger-LeCoultre Master Ultra Thin (4K PNG)</option>

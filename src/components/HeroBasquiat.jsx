@@ -89,6 +89,7 @@ export default function HeroBasquiat({ onOpenBooking }) {
           loop
           muted
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover object-center filter brightness-105 contrast-110"
           poster="./assets/timuse/hero_basquiat_watch.jpg"
         >

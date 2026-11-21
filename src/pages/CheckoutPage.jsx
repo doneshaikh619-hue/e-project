@@ -156,7 +156,7 @@ export default function CheckoutPage() {
           brand: item.watch.brand,
           price: item.watch.price,
           quantity: item.quantity,
-          image: item.watch.image || (item.watch.images && item.watch.images[0]) || './assets/watches/raymond_weil_basquiat.png'
+          image: item.watch.image || (item.watch.images && item.watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp'
         })),
         notes: formData.instructions
       };
@@ -518,7 +518,7 @@ export default function CheckoutPage() {
 
           <div className="divide-y divide-white/10 max-h-60 overflow-y-auto">
             {cartItems.map(({ watch, quantity }) => {
-              const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.png';
+              const watchImg = watch.image || (watch.images && watch.images[0]) || './assets/watches/raymond_weil_basquiat.webp';
 
               return (
                 <div key={watch.id} className="py-3 flex items-center justify-between">
