@@ -35,6 +35,17 @@ export default function ProfilePage() {
     address: user?.address || ''
   });
 
+  // Keep form synchronized when user profile updates or loads
+  useEffect(() => {
+    if (user) {
+      setEditForm({
+        name: user.name || '',
+        phone: user.phone || '',
+        address: user.address || ''
+      });
+    }
+  }, [user]);
+
   useEffect(() => {
     if (user?.id) {
       api.getOrders(user.id).then(res => {
@@ -103,7 +114,7 @@ export default function ProfilePage() {
 
         <div className="flex items-center space-x-3">
           <button
-            onClick={() => setIsEditingProfile(!isEditingProfile)}
+            onClick={() => setIsEditingProfile(true)}
             className="gold-button-outline px-4 py-2 rounded-xl text-xs font-bold flex items-center space-x-1.5"
           >
             <Edit2 className="w-3.5 h-3.5" />
@@ -298,6 +309,94 @@ export default function ProfilePage() {
             <MapPin className="w-6 h-6 text-luxury-gold" />
             <h4 className="font-serif font-semibold text-xs text-slate-200">Register Secondary Estate Address</h4>
             <p className="text-[11px] text-slate-400">Add an additional verified destination in London, New York or Dubai.</p>
+          </div>
+        </div>
+      )}
+
+      {/* Edit Profile Modal */}
+      {isEditingProfile && (
+        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 animate-fadeIn">
+          <div className="glass-card rounded-3xl max-w-lg w-full border border-luxury-gold/40 p-6 sm:p-8 space-y-6 relative shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setIsEditingProfile(false)}
+              className="absolute top-5 right-5 p-1 text-slate-400 hover:text-white transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <div className="border-b border-white/10 pb-4">
+              <span className="text-[10px] uppercase font-bold tracking-widest text-luxury-gold">Geneva Vault Dossier</span>
+              <h3 className="font-serif text-xl sm:text-2xl font-bold text-slate-100 mt-1 flex items-center space-x-2">
+                <Edit2 className="w-5 h-5 text-luxury-gold" />
+                <span>Edit Client Profile</span>
+              </h3>
+              <p className="text-xs text-slate-400 mt-1">Update your legal client credentials and armored delivery address.</p>
+            </div>
+
+            <form onSubmit={handleSaveProfile} className="space-y-4 text-xs">
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1.5">Full Legal Name</label>
+                <input
+                  type="text"
+                  required
+                  value={editForm.name}
+                  onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+                  placeholder="e.g. Jean-Luc Picard"
+                  className="w-full bg-luxury-900 border border-white/15 rounded-xl px-4 py-2.5 text-slate-100 focus:outline-none focus:border-luxury-gold transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1.5">Primary Email (Account ID)</label>
+                <input
+                  type="email"
+                  disabled
+                  value={user?.email || ''}
+                  className="w-full bg-black/50 border border-white/5 rounded-xl px-4 py-2.5 text-slate-400 cursor-not-allowed"
+                />
+                <p className="text-[10px] text-slate-500 mt-1">Contact Master Concierge to request an email update.</p>
+              </div>
+
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1.5">Direct Telephone / Mobile</label>
+                <input
+                  type="tel"
+                  value={editForm.phone}
+                  onChange={(e) => setEditForm({ ...editForm, phone: e.target.value })}
+                  placeholder="+41 22 819 12 00"
+                  className="w-full bg-luxury-900 border border-white/15 rounded-xl px-4 py-2.5 text-slate-100 focus:outline-none focus:border-luxury-gold transition-colors"
+                />
+              </div>
+
+              <div>
+                <label className="block text-slate-300 font-semibold mb-1.5">Primary Estate / Armored Address</label>
+                <textarea
+                  rows="3"
+                  value={editForm.address}
+                  onChange={(e) => setEditForm({ ...editForm, address: e.target.value })}
+                  placeholder="e.g. 42 Rue du Rhône, 1204 Geneva, Switzerland"
+                  className="w-full bg-luxury-900 border border-white/15 rounded-xl p-3 text-slate-100 focus:outline-none focus:border-luxury-gold transition-colors resize-none"
+                />
+              </div>
+
+              <div className="flex items-center justify-end space-x-3 pt-3 border-t border-white/10">
+                <button
+                  type="button"
+                  onClick={() => setIsEditingProfile(false)}
+                  className="px-4 py-2.5 rounded-xl border border-white/20 text-slate-300 hover:text-white hover:bg-white/5 text-xs font-semibold transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  type="submit"
+                  className="gold-button px-6 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider flex items-center space-x-2"
+                >
+                  <Save className="w-4 h-4" />
+                  <span>Save Changes</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
